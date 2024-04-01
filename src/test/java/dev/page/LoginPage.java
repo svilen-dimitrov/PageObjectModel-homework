@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
+
     // private WebDriver driver;
 
     @FindBy(id = "user-name")
@@ -41,5 +42,11 @@ public class LoginPage extends BasePage {
     }
     public String getErrorMessage(){
         return errorMessage.getText();
+    }
+
+    public void loginAs(String username, String password){
+        setUsername(username);
+        setPassword(password);
+        clickLoginButton();
     }
 }

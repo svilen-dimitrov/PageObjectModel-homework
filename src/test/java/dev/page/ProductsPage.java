@@ -16,7 +16,7 @@ public class ProductsPage {
     private WebElement item;
 
     @FindBy(css = ".shopping_cart_badge")
-    private WebElement ShopingCartBadge;
+    private WebElement ShoppingCartBadge;
 
     @FindBy(id = "checkout")
     private WebElement checkout;
@@ -37,10 +37,14 @@ public class ProductsPage {
         item.click();
     }
    public void openShoppingCart(){
-        ShopingCartBadge.click();
+        ShoppingCartBadge.click();
     }
     public void checkoutButton(){
         checkout.click();
+    }
+
+    public HeaderComponent header() {
+        return new HeaderComponent(driver);
     }
 
 }
